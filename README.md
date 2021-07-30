@@ -5,12 +5,11 @@ If you would like to see how the model performs and submit the results to [the c
 
 Below is a list of the other scripts and their functions:
 
-* `parameters.py`: Model parameters and global variables used in other scripts.
+* `parameters.py`: Model parameters (optimizer, learning rate, loss function etc.) and global variables used in other scripts.
 * `model.py`: Includes `Net` class&mdash;the classifier.
 * `dataset.py`: Includes `ACIDataset` class for putting the dataset in PyTorch-readable format.
 * `load_data.py`: Places the data in `Dataloader`s&mdash;PyTorch data iterators.
 * `utilities.py`: Training and testing loops, plotting functions etc.
-
 
 ## Dataset
 
@@ -38,7 +37,7 @@ Since the labels of the real test set are unknown, the AUC score can only be see
 * Validation (%20)
 * Test (%10).
 
-The AUC score on this test set taken from the training set provided by Kaggle is 0.998, see the figure below. After training the model with all of the training set instead of %70 percent of it, the score evaluated on the real test set on Kaggle is 0.995.
+The AUC score on this test set taken from the training set provided by Kaggle is 0.998&mdash;see the figure below. After training the model with %100 of the training set and submitting the results to Kaggle, the score is 0.995.
 
 <p align="center">
   <img width="480" height="360" src="./auc_graph.png">
