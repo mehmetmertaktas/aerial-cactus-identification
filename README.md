@@ -19,7 +19,7 @@ The dataset used in this project can be found on [Kaggle](https://www.kaggle.com
 
 
 <p align="center">
-  <img width="600" height="120" src="./dataset.png">
+  <img width="800" height="160" src="./dataset.png">
 </p>
 
 ## Model
