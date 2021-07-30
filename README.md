@@ -27,7 +27,9 @@ Since the labels of the real test set are unknown, the AUC score can only be see
 
 The AUC score on this test set taken from the training set provided by Kaggle is 0.998. 
 
-![auc](./auc_graph.png)
+<p align="center">
+  <img width="640" height="480" src="./auc_graph.png">
+</p>
 
 After training the model with all of the training set instead of %70 percent of it, the score evaluated on the real test set on Kaggle is 0.995.
 
