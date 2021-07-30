@@ -31,6 +31,8 @@ A simple CNN is used. The model is summarized in the figure below and can also b
 
 ## Results
 
+Here is a section from `results.csv`:
+
 |id                                  |has_cactus            |
 |------------------------------------|----------------------|
 |000940378805c44108d287872b2f04ce.jpg|0.9978019595146179    |
@@ -40,7 +42,7 @@ A simple CNN is used. The model is summarized in the figure below and can also b
 |0036e44a7e8f7218e9bc7bf8137e4943.jpg|0.812560498714447     |
 |0038ed6f7417b8275b393307f66cb1e3.jpg|0.9998985528945923    |
 |0059dfa41de4441fc23b9a4b98ba99cb.jpg|0.999962568283081     |
-|0061bd302d735db829418cb90b4e6040.jpg|0.9999998807907104    |
+|0061bd302d735db829418cb90b4e6040.jpg|0.9999998807907104    |.
 
 Since the labels of the real test set are unknown, the AUC score can only be seen after submitting the results to Kaggle. To visualize the model's performance, the training set is split into 3: 
 
