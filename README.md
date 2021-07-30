@@ -18,7 +18,7 @@ The dataset used in this project can be found on [Kaggle](https://www.kaggle.com
 
 
 <p align="center">
-  <img width="800" height="160" src="./dataset.png">
+  <img width="800" height="160" src="./images/dataset.png">
 </p>
 
 ## Model
@@ -26,7 +26,7 @@ The dataset used in this project can be found on [Kaggle](https://www.kaggle.com
 A simple CNN is used. The model is summarized in the figure below and can also be looked at `model.py`.
 
 <p align="center">
-  <img width="600" height="300" src="./nn.png">
+  <img width="600" height="300" src="./images/nn.png">
 </p>
 
 ## Results
@@ -54,6 +54,6 @@ Since the labels of the real test set are unknown, the AUC score can only be see
 The AUC score on this test set taken from the training set provided by Kaggle is 0.998&mdash;see the figure below. After training the model with %100 of the training set and submitting the results to Kaggle, the score is 0.995.
 
 <p align="center">
-  <img width="480" height="360" src="./auc_graph.png">
+  <img width="480" height="360" src="./images/auc_graph.png">
 </p>
 

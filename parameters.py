@@ -3,7 +3,7 @@ from torch import nn
 from torchvision import transforms
 from utilities import Utilities
 
-RESULTS_PATH    = './results.csv'
+RESULTS_PATH    = './output/results.csv'
 DATA_DIR        = './input/'
 TRAIN_ZIP_DIR   = DATA_DIR + 'train.zip'
 TEST_ZIP_DIR    = DATA_DIR + 'test.zip'
