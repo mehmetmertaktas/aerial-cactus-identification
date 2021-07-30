@@ -14,7 +14,7 @@ A simple CNN is used. The model is summarized in the figure below.
 * `model.py`: Includes `Net` class.
 
 <p align="center">
-  <img width="460" height="300" src="./nn.png">
+  <img width="600" height="300" src="./nn.png">
 </p>
 
 ## Results
