@@ -1,6 +1,6 @@
 # Aerial Cactus Identification
 
-This is a learning project where I implement a convolutional neural network using PyTorch. I have used a small sized dataset from Kaggle to be able to quickly run the model on my local machine.
+This is a learning project where I implement a convolutional neural network using PyTorch for binary classification. I have used a small sized dataset from Kaggle to be able to quickly run the model on my local machine.
 If you would like to see how the model performs and submit the results to [the competition](https://www.kaggle.com/c/aerial-cactus-identification/) to see the score yourself, you can just use the saved model by running `python run_saved_model.py`&mdash;saving the results to `results.csv`. To see the whole training process and visualizations of results, you can run `python main.py`.
 
 Below is a list of the other scripts and their functions:
