@@ -13,8 +13,8 @@ Below is a list of the other scripts and their functions:
 
 To install the dependencies:
 
-* Using pip: `pip install -r requirements.txt`
-* Using conda: `conda install --file requirements.txt`
+* `pip install -r requirements.txt` or
+* `conda install --file requirements.txt`
 
 ## Dataset
 
