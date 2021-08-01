@@ -9,7 +9,7 @@ Below is a list of the other scripts and their functions:
 * `model.py`: Includes `Net` class&mdash;the classifier.
 * `dataset.py`: Includes `ACIDataset` class for putting the dataset in PyTorch-readable format.
 * `load_data.py`: Places the data in `Dataloader`s&mdash;PyTorch data iterators.
-* `utilities.py`: Training and testing loops, plotting functions etc.
+* `utilities.py`: Training and testing loops, plot functions etc.
 
 To install the dependencies:
 
