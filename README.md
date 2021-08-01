@@ -11,6 +11,11 @@ Below is a list of the other scripts and their functions:
 * `load_data.py`: Places the data in `Dataloader`s&mdash;PyTorch data iterators.
 * `utilities.py`: Training and testing loops, plotting functions etc.
 
+To install the dependencies:
+
+* Using pip: `pip install -r requirements.txt`
+* Using conda: `conda install --file requirements.txt`
+
 ## Dataset
 
 The dataset used in this project can be found on [Kaggle](https://www.kaggle.com/c/aerial-cactus-identification/data). This dataset contains a large number of 32x32 RGB images of aerial photos of a cactus. There are 17500 images in the training test and 4000 in the test set. Below is a small selection from the dataset.
