@@ -8,6 +8,14 @@ from load_data import (
     all_dl,
     test_dl
 )
+from utils import (
+    display_data,
+    init_weights,
+    train,
+    plot_history,
+    plot_auc_curve,
+    save_results
+)
 from parameters import (
     LABELS_MAP,
     DEVICE,
@@ -17,14 +25,6 @@ from parameters import (
     N_EPOCHS,
     LOSS_FN,
     RESULTS_PATH
-)
-from utils import (
-    display_data,
-    init_weights,
-    train,
-    plot_history,
-    plot_auc_curve,
-    save_results
 )
 
 display_data(data, classes=LABELS_MAP)
