@@ -2,7 +2,17 @@ import os
 import zipfile
 from torch.utils.data import DataLoader, random_split
 from dataset import ACIDataset
-from parameters import *
+from parameters import (
+    TRAIN_DIR, 
+    TRAIN_ZIP_DIR, 
+    TEST_DIR, 
+    TEST_ZIP_DIR, 
+    ANNOTATIONS_DIR, 
+    TRANSFORM, 
+    VALIDATION_PERC, 
+    AUC_PERC, 
+    BATCH_SIZE
+)
 
 if not os.path.exists(TRAIN_DIR):
     with zipfile.ZipFile(TRAIN_ZIP_DIR, 'r') as zip_ref:
@@ -32,4 +42,4 @@ train_dl = DataLoader(train_data, batch_size=BATCH_SIZE)
 valid_dl = DataLoader(val_data, batch_size=BATCH_SIZE)
 auc_dl   = DataLoader(auc_data, batch_size=1)
 all_dl   = DataLoader(data, batch_size=BATCH_SIZE)
-test_dl  = DataLoader(test_data, batch_size=BATCH_SIZE)
+test_dl  = DataLoader(test_data, batch_size=1)

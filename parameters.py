@@ -1,7 +1,6 @@
 import torch
 from torch import nn
 from torchvision import transforms
-from utilities import Utilities
 
 RESULTS_PATH    = './output/results.csv'
 DATA_DIR        = './input/'
@@ -27,4 +26,3 @@ STD             = (0.5, 0.5, 0.5)
 LABELS_MAP      = {0: 'No Cactus', 1: 'Cactus'}
 TRANSFORM       = transforms.Compose([transforms.ToTensor(),
                                       transforms.Normalize(MEAN, STD)])
-U               = Utilities(DEVICE)

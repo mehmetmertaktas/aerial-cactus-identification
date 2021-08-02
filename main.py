@@ -1,13 +1,37 @@
 import torch
 from torchinfo import summary
 from model import Net
-from load_data import *
-from parameters import *
+from load_data import (
+    data,
+    train_dl,
+    valid_dl,
+    auc_dl,
+    all_dl,
+    test_dl
+)
+from parameters import (
+    LABELS_MAP,
+    DEVICE,
+    INPUT_SIZE,
+    OPTIMIZER,
+    LEARNING_RATE,
+    N_EPOCHS,
+    LOSS_FN,
+    RESULTS_PATH
+)
+from utils import (
+    display_data,
+    init_weights,
+    train,
+    plot_history,
+    plot_auc_curve,
+    save_results
+)
 
-U.display_data(data, classes=LABELS_MAP)
+display_data(data, classes=LABELS_MAP)
 
 model = Net().to(DEVICE)
-model.apply(U.init_weights)
+model.apply(init_weights)
 
 print('\n==================================== MODEL SUMMARY =======================================')
 summary(model, input_size=INPUT_SIZE)
@@ -15,37 +39,37 @@ summary(model, input_size=INPUT_SIZE)
 print('\nTraining... (with validation)\n')
 
 optimizer = OPTIMIZER(model.parameters(),
-                             lr=LEARNING_RATE)
-history = U.train(model,
-                  train_dl,
-                  valid_dl,
-                  optimizer=optimizer,
-                  lr=LEARNING_RATE,
-                  epochs=N_EPOCHS,
-                  loss_fn=LOSS_FN)
+                      lr=LEARNING_RATE)
+history = train(model,
+                train_dl,
+                valid_dl,
+                optimizer=optimizer,
+                lr=LEARNING_RATE,
+                epochs=N_EPOCHS,
+                loss_fn=LOSS_FN)
 
-U.plot_history(history, validation=True)
+plot_history(history, validation=True)
 
-U.AUC(model, auc_dl)
+plot_auc_curve(model, auc_dl)
 
 model_ = Net().to(DEVICE)
-model_.apply(U.init_weights)
+model_.apply(init_weights)
 
 print('\nTraining... (without validation)\n')
 
 optimizer = OPTIMIZER(model_.parameters(),
-                             lr=LEARNING_RATE)
-history = U.train(model_,
-                  all_dl,
-                  optimizer=optimizer,
-                  lr=LEARNING_RATE,
-                  epochs=N_EPOCHS,
-                  loss_fn=LOSS_FN)
+                      lr=LEARNING_RATE)
+history = train(model_,
+                all_dl,
+                optimizer=optimizer,
+                lr=LEARNING_RATE,
+                epochs=N_EPOCHS,
+                loss_fn=LOSS_FN)
 
-U.plot_history(history)
+plot_history(history)
 
 torch.save(model_, './model.pth')
 
 print('\nSaving results...')
 
-U.save_results(RESULTS_PATH, test_data, model_)
+save_results(RESULTS_PATH, test_dl, model_)
