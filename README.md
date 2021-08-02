@@ -50,6 +50,12 @@ Here is a small section of `results.csv`:
 |0059dfa41de4441fc23b9a4b98ba99cb.jpg|0.999962568283081     |
 |0061bd302d735db829418cb90b4e6040.jpg|0.9999998807907104    |
 
+Below figure shows how loss and accuracy changed during training.
+
+<p align="center">
+  <img width="900" height="300" src="./output/loss_acc_plot_w_val.png">
+</p>
+
 Since the labels of the real test set are unknown, the AUC score can only be seen after submitting the results to Kaggle. To visualize the model's performance, the training set is split into 3: 
 
 * Training (%70)
