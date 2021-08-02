@@ -130,6 +130,10 @@ def plot_history(history, validation=False):
     if validation:
         plt.plot(history['validation_loss'], label='Validation')
     plt.legend()
+    if validation:
+        plt.savefig('./output/loss_acc_plot_w_val.png')
+    else:
+        plt.savefig('./output/loss_acc_plot_wo_val.png')
     plt.show()
 
 def save_results(path, dataloader, model):

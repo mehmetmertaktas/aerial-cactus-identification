@@ -1,5 +1,4 @@
 import torch
-from torchinfo import summary
 from model import Net
 from load_data import (
     data,
@@ -32,9 +31,6 @@ display_data(data, classes=LABELS_MAP)
 
 model = Net().to(DEVICE)
 model.apply(init_weights)
-
-print('\n==================================== MODEL SUMMARY =======================================')
-summary(model, input_size=INPUT_SIZE)
 
 print('\nTraining... (with validation)\n')
 
