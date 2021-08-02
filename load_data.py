@@ -40,6 +40,6 @@ train_data, val_data, auc_data = random_split(data, [len(data) - validation_size
 
 train_dl = DataLoader(train_data, batch_size=BATCH_SIZE)
 valid_dl = DataLoader(val_data, batch_size=BATCH_SIZE)
-auc_dl   = DataLoader(auc_data, batch_size=1)
 all_dl   = DataLoader(data, batch_size=BATCH_SIZE)
+auc_dl   = DataLoader(auc_data, batch_size=1)
 test_dl  = DataLoader(test_data, batch_size=1)
