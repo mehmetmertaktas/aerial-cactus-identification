@@ -19,7 +19,6 @@ from utils import (
 from parameters import (
     LABELS_MAP,
     DEVICE,
-    INPUT_SIZE,
     OPTIMIZER,
     LEARNING_RATE,
     N_EPOCHS,
