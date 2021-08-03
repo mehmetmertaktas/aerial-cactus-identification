@@ -1,5 +1,5 @@
 from torch import load
-from parameters import DEVICE, INPUT_SIZE, RESULTS_PATH
+from parameters import DEVICE, RESULTS_PATH
 from utils import save_results
 from load_data import test_dl
 
