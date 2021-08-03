@@ -11,7 +11,6 @@ ANNOTATIONS_DIR = DATA_DIR + 'train.csv'
 TRAIN_DIR       = './train'
 TEST_DIR        = './test'
 DEVICE          = 'cuda' if torch.cuda.is_available() else 'cpu'
-INPUT_SIZE      = (1, 3, 32, 32)
 N_LABELS        = 2
 N_EPOCHS        = 10
 BATCH_SIZE      = 64
@@ -24,5 +23,4 @@ MOMENTUM        = 0.9
 MEAN            = (0.5, 0.5, 0.5)
 STD             = (0.5, 0.5, 0.5)
 LABELS_MAP      = {0: 'No Cactus', 1: 'Cactus'}
-TRANSFORM       = transforms.Compose([transforms.ToTensor(),
-                                      transforms.Normalize(MEAN, STD)])
+TRANSFORM       = transforms.Compose([transforms.ToTensor(), transforms.Normalize(MEAN, STD)])
